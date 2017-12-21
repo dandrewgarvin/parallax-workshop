@@ -1,0 +1,42 @@
+.StarWars {
+    /* background color to demonstrate what's happening. leave off to show effect, turn on to explain */
+    /* background: #333; */
+    color: yellow;
+    position: absolute;
+	width: 18em;
+	height: 50em;
+	bottom: 0;
+	left: 50%;
+	margin-left: -9em;
+	font-size: 350%;
+	font-weight: bold;
+	text-align: justify;
+	overflow: scroll;
+	transform-origin: 50% 100%;
+	transform: perspective(300px) rotateX(20deg);
+	line-height: 5.5rem;
+}
+
+.StarWars:after {
+    position: fixed;
+	content: ' ';
+	left: 0;
+	right: 0;
+	top: 0;
+	bottom: 60%;
+	background-image: linear-gradient(top, rgba(0,0,0,1) 0%, transparent 100%);
+	pointer-events: none;
+}
+
+.ScrollText {
+    position: absolute;
+    top: 100%;
+    margin-bottom: 5000px;
+    /* animation can be on or off. the gradient doesn't with with manual scroll, but it does with animation */
+	animation: scroll 100s linear 2s infinite;
+}
+
+@keyframes scroll {
+	0% { top: 100%; }
+	100% { top: -170%; }
+}
