@@ -51,7 +51,7 @@ body, html {
 }
 
 .para_obj:nth-child(even) {
-    transform:  translateZ(-2px);
+    transform:  translateZ(-10px) scale(3);
     background-color: #222;
     color: white;
     z-index: 1;
